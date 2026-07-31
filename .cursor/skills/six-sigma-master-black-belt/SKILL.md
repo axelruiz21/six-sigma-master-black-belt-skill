@@ -206,4 +206,22 @@ from the codebase when available.
 4. Never equate "more architecture" with "better architecture."
 5. When the user asks only for a narrow design question, still run a lightweight
    D→A pass; expand to full report if they ask for a full audit.
+
+## Suite handoffs
+
+Do **not** absorb adjacent skills’ jobs. Point the user (or chain) as follows:
+
+| Situation | Hand off to |
+|-----------|-------------|
+| Problem / CTQs / scope still vague | `ctq-charter` |
+| Metrics unknown or untrusted | `measurement-system` |
+| Incident / postmortem / recurring defect | `incident-rca` |
+| Delivery lead time / PR flow / process waste | `eng-value-stream` |
+| Greenfield or major forward design from CTQs | `dfss-system-design` |
+| Deep failure-mode workbook needed | `design-fmea` |
+| Validate an Improve change experimentally | `controlled-experiment` |
+| Lock gains after Improve | `control-plan` |
+| Small local pain (not system-wide) | `a3-kaizen` |
+
+Shared vocabulary: see suite `shared/vocabulary.md` when present.
 ```

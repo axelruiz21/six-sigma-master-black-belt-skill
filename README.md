@@ -1,67 +1,63 @@
-# Six Sigma Master Black Belt Skill
+# Six Sigma MBB Skill Suite
 
-A Cursor Agent Skill that audits **project and system architecture** with Master Black Belt rigor and a **first-principles engineering** mindset. It maps **DMAIC** onto structure (boundaries, coupling, failure domains, CTQs) and emits a **structured audit report**.
+Cursor Agent Skills for **software-systems excellence**: Master Black Belt architecture audits plus adjacent skills that own charter, measurement, RCA, value stream, DFSS, FMEA, experiments, control plans, and kaizen.
 
-## What it does
+Anchor skill: **architecture-level DMAIC** with first-principles checks. Suite map and handoffs: [SUITE.md](SUITE.md). Shared terms: [shared/vocabulary.md](shared/vocabulary.md).
 
-- Defines the real problem, SIPOC, and CTQs (`Y = f(X)`) before debating tools
-- Measures structural and runtime signals (or names what to instrument)
-- Analyzes root causes with Lean waste, coupling types, and lightweight FMEA
-- Recommends high-leverage improvements that **delete** unjustified complexity
-- Specifies Control: fitness functions, metrics, and ownership
+## Skills
 
-## Install
+| Folder | Role |
+|--------|------|
+| `six-sigma-master-black-belt` | Architecture DMAIC audit |
+| `ctq-charter` | Problem framing and project charter |
+| `measurement-system` | Metric validity / instrumentation (MSA) |
+| `incident-rca` | Incident and recurring-defect root cause |
+| `eng-value-stream` | Engineering delivery value-stream map |
+| `dfss-system-design` | Design for Six Sigma (greenfield / redesign) |
+| `design-fmea` | Design/process FMEA workbook |
+| `controlled-experiment` | Hypothesis tests and rollout rules |
+| `control-plan` | Hold-the-gains control plan |
+| `a3-kaizen` | Small-scope A3 / kaizen |
 
-### Option A — Project skill (this repo / any repo)
-
-Copy the skill folder into the project:
-
-```bash
-mkdir -p .cursor/skills
-cp -R six-sigma-master-black-belt .cursor/skills/
-```
-
-### Option B — Personal skill (all projects)
-
-```bash
-mkdir -p ~/.cursor/skills
-cp -R six-sigma-master-black-belt ~/.cursor/skills/
-```
-
-### Option C — Clone
+## Install all (personal)
 
 ```bash
 git clone https://github.com/axelruiz21/six-sigma-master-black-belt-skill.git
-cp -R six-sigma-master-black-belt-skill/six-sigma-master-black-belt ~/.cursor/skills/
+cd six-sigma-master-black-belt-skill
+mkdir -p ~/.cursor/skills
+for d in six-sigma-master-black-belt ctq-charter measurement-system incident-rca \
+  eng-value-stream dfss-system-design design-fmea controlled-experiment \
+  control-plan a3-kaizen; do
+  cp -R "$d" ~/.cursor/skills/
+done
 ```
 
-Restart or refresh Cursor agents after installing so the skill is discovered.
+## Install all (project)
 
-## When it auto-invokes
+From this repo root (or after clone):
 
-The skill description is written to trigger on language like:
-
-- architecture review / design review / system design
-- tech debt audit / over-engineering
-- first-principles redesign / structural refactor
-- DMAIC / Six Sigma / Black Belt applied to a codebase
-
-You can also invoke it explicitly: *“Use the six-sigma-master-black-belt skill to audit this system.”*
-
-## Skill contents
-
-```
-six-sigma-master-black-belt/
-├── SKILL.md       # Workflow, checklist, audit report template
-├── reference.md   # CTQs, waste, coupling, FMEA, fitness functions
-└── examples.md    # Sample audits
+```bash
+mkdir -p .cursor/skills
+for d in six-sigma-master-black-belt ctq-charter measurement-system incident-rca \
+  eng-value-stream dfss-system-design design-fmea controlled-experiment \
+  control-plan a3-kaizen; do
+  cp -R "$d" .cursor/skills/
+done
 ```
 
-## Output
+## Install one
 
-Audits follow a DMAIC-shaped report: **Executive verdict → Define → Measure → Analyze → Improve → Control**, with severity on structural risks.
+```bash
+mkdir -p ~/.cursor/skills   # or .cursor/skills for project-only
+cp -R six-sigma-master-black-belt ~/.cursor/skills/
+```
+
+Restart or refresh Cursor agents after installing.
+
+## When skills auto-invoke
+
+Each skill’s description uses **distinct** trigger language (see [SUITE.md](SUITE.md)). Invoke explicitly when needed, e.g. *“Use ctq-charter, then six-sigma-master-black-belt.”*
 
 ## License
 
 Use and adapt freely for your teams and repos.
-```
