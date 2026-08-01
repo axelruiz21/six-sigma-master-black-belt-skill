@@ -4,6 +4,8 @@ Cursor Agent Skills for **software-systems excellence**: Master Black Belt archi
 
 Anchor skill: **architecture-level DMAIC** with first-principles checks. Suite map and handoffs: [SUITE.md](SUITE.md). Shared terms: [shared/vocabulary.md](shared/vocabulary.md).
 
+**Short wiki writeup:** [wiki/Home.md](wiki/Home.md) ([catalog](wiki/Skill-Catalog.md) · [handoffs](wiki/Handoffs.md) · [install](wiki/Install.md)). Also intended for the [GitHub Wiki](https://github.com/axelruiz21/six-sigma-master-black-belt-skill/wiki) once that wiki is initialized.
+
 ## Skills
 
 | Folder | Role |
