@@ -1,4 +1,5 @@
 # Six Sigma MBB Skill Suite
+<img width="1605" height="1035" alt="dither" src="https://github.com/user-attachments/assets/a30d971b-8416-4c6e-ab41-e5d6da77ffe3" />
 
 Cursor Agent Skills for **software-systems excellence**: Master Black Belt architecture audits plus adjacent skills that own charter, measurement, RCA, value stream, DFSS, FMEA, experiments, control plans, and kaizen.
 
